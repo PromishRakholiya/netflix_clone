@@ -131,7 +131,9 @@ function Banner({ onMovieClick }) {
         
         <div className="banner__metadata">
           {movie?.Year && <span className="banner__year">{movie.Year}</span>}
+          }
           {movie?.Runtime && <span className="banner__runtime">{movie.Runtime}</span>}
+          }
           {movie?.vote_average && (
             <span className="banner__rating">
               ⭐ {movie.vote_average}/10
