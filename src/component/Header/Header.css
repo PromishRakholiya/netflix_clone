@@ -1,0 +1,180 @@
+.nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 20px;
+  background: linear-gradient(180deg, rgba(0,0,0,0.7) 10%, transparent);
+  z-index: 1000;
+  transition: all 0.3s ease;
+}
+
+.nav__black {
+  background-color: #111;
+}
+
+.nav__contents {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.nav__left {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.nav__logo {
+  width: 92px;
+  height: 25px;
+  object-fit: contain;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.nav__logo:hover {
+  transform: scale(1.05);
+}
+
+.nav__links {
+  display: flex;
+  gap: 20px;
+}
+
+.nav__link {
+  color: #e5e5e5;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 400;
+  transition: color 0.3s ease;
+  text-decoration: none;
+  position: relative;
+}
+
+.nav__link:hover {
+  color: #b3b3b3;
+}
+
+.nav__link:first-child {
+  color: white;
+  font-weight: 500;
+}
+
+.nav__right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.nav__search,
+.nav__notifications {
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.nav__search:hover,
+.nav__notifications:hover {
+  transform: scale(1.1);
+}
+
+.nav__searchIcon,
+.nav__notificationIcon {
+  width: 20px;
+  height: 20px;
+  color: white;
+}
+
+.nav__profile {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  padding: 4px;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+}
+
+.nav__profile:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.nav__avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 4px;
+  object-fit: contain;
+}
+
+.nav__dropdownIcon {
+  width: 16px;
+  height: 16px;
+  color: white;
+  transition: transform 0.2s ease;
+}
+
+.nav__profile:hover .nav__dropdownIcon {
+  transform: rotate(180deg);
+}
+
+/* Mobile Responsive */
+@media (max-width: 1024px) {
+  .nav__links {
+    gap: 15px;
+  }
+  
+  .nav__link {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav {
+    padding: 15px 20px;
+  }
+  
+  .nav__left {
+    gap: 20px;
+  }
+  
+  .nav__links {
+    display: none;
+  }
+  
+  .nav__logo {
+    width: 80px;
+    height: 22px;
+  }
+  
+  .nav__right {
+    gap: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav {
+    padding: 10px 15px;
+  }
+  
+  .nav__logo {
+    width: 70px;
+    height: 19px;
+  }
+  
+  .nav__right {
+    gap: 10px;
+  }
+  
+  .nav__searchIcon,
+  .nav__notificationIcon {
+    width: 18px;
+    height: 18px;
+  }
+  
+  .nav__avatar {
+    width: 28px;
+    height: 28px;
+  }
+}
