@@ -79,6 +79,12 @@
   color: white;
 }
 
+.banner__buttons {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
 .banner__button {
   display: flex;
   align-items: center;
